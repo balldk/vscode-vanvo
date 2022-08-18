@@ -1,0 +1,32 @@
+{
+    "name": "vscode-vanvo",
+    "displayName": "VanVo language support",
+    "description": "Language support for VanVo - a vietnamese-syntax programming language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.70.0"
+    },
+    "categories": [
+		"Snippets",
+        "Programming Languages"
+    ],
+    "contributes": {
+		"snippets": [
+			{
+				"language": "vanvo",
+				"path": "snippets/snippets.json"
+			}
+		],
+        "languages": [{
+            "id": "vanvo",
+            "aliases": ["VanVo", "vanvo"],
+            "extensions": [".vv"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vanvo",
+            "scopeName": "source.vv",
+            "path": "./syntaxes/vanvo.tmLanguage.json"
+        }]
+    }
+}

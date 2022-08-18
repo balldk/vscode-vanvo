@@ -1,0 +1,159 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "vanvo",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#predefines"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#brackets"
+		}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.vanvo",
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.begin.vanvo"
+						}
+					},
+					"end": "$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.vanvo",
+					"match": "\\b(hay|và|va|còn nếu|con neu|nếu|neu|còn không|con khong|với mỗi|voi moi|với|voi|thuộc|thuoc)\\b"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.modifier.vanvo",
+					"match": "(\\b(cho)\\b)|(=>)"
+				}
+			]
+		},
+		"predefines": {
+			"patterns": [
+				{
+					"name": "entity.name.function.member.vanvo",
+					"match": "(?=\\s*)\\b(nhập|xuất|nhap|xuat)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.vanvo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vanvo",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.float.vanvo",
+					"match": "([0-9]+(_?))+(\\.)([0-9]+)"
+				},
+				{
+					"name": "constant.numeric.integer.vanvo",
+					"match": "(?:(?:[0-9]+)(?:[_]?))+"
+				}
+			]
+		},
+		"constants": {
+			"name": "constant.language.vanvo",
+			"match": "\\b(đúng|dung|sai|PI|I)\\b"
+		},
+		"brackets": {
+			"patterns": [
+				{
+					"begin": "{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.curly.begin.vanvo"
+						}
+					},
+					"end": "}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.curly.end.vanvo"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.round.begin.vanvo"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.round.end.vanvo"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "\\[",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.square.begin.vanvo"
+						}
+					},
+					"end": "\\]",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.bracket.square.end.vanvo"
+						}
+					},
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.vv"
+}

@@ -1,0 +1,44 @@
+{
+    "cho": {
+        "body": ["cho ${1:x} = $2"],
+        "description": "Khai báo biến/hàm",
+        "prefix": "cho",
+        "scope": "vila"
+    },
+    "xuất": {
+        "body": ["xuất $1"],
+        "description": "Xuất biểu thức ra màn hình console",
+        "prefix": "xu",
+        "scope": "vila"
+    },
+    "nếu": {
+        "body": ["nếu ${1:đúng}:", "\t$2"],
+        "description": "Mệnh đề nếu",
+        "prefix": "neu",
+        "scope": "vila"
+    },
+    "còn nếu": {
+        "body": ["còn nếu ${1:đúng}:", "\t$2"],
+        "description": "Mệnh đề còn nếu",
+        "prefix": ["cn", "con neu"],
+        "scope": "vila"
+    },
+    "còn không": {
+        "body": ["còn không:", "\t$1"],
+        "description": "Mệnh đề còn không",
+        "prefix": ["ck", "con khong"],
+        "scope": "vila"
+    },
+    "với": {
+        "body": ["với ${1:đúng}:", "\t$2"],
+        "description": "Cấu trúc lặp \"với\"",
+        "prefix": "voi",
+        "scope": "vila"
+    },
+    "với mỗi": {
+        "body": ["với mỗi ${1:n} thuộc $2:", "\t$3"],
+        "description": "Cấu trúc lặp \"với mỗi _ thuộc _\"",
+        "prefix": ["voim", "voi moi"],
+        "scope": "vila"
+    }
+}
