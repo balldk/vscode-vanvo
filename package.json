@@ -3,6 +3,8 @@
     "displayName": "VanVo language support",
     "description": "Language support for VanVo - a vietnamese-syntax programming language",
     "version": "0.0.1",
+    "repository": "https://github.com/balldk/vscode-vanvo",
+    "publisher": "balldk",
     "engines": {
         "vscode": "^1.70.0"
     },
